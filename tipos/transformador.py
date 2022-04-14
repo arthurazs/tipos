@@ -1,14 +1,16 @@
 from enum import Enum
-import typing
+from typing import Union, Any
+
 
 class TipoTransformador(Enum):
     OLEO = 0
     SECO = 1
 
+
 class Transformador:
 
     # dunder = double underscore
-    def __init__(self, identificacao: typing.Union[str, int], tipo: int, valor: typing.Any):
+    def __init__(self, identificacao: Union[str, int], tipo: int, valor: Any):
         self.identificacao = identificacao
         self._tipo = TipoTransformador(tipo)
         if tipo == 1:
