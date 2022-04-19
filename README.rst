@@ -11,6 +11,7 @@ Instalação
 
 .. code-block:: bash
 
+    pip install poetry
     poetry install
 
 Execução
@@ -27,4 +28,5 @@ typing/mypy
 
 .. code-block:: bash
 
-    poetry run mypy tipos/transformador.py
+    poetry run mypy tipos tests
+    poetry run pytest -v
